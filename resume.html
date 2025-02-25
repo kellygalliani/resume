@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Kelly Cristina dos Santos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        position: relative;
+        padding-top: 2rem;
+      }
+      .color-green-dark {
+        color: #064e3b; /* Dark green */
+      }
+      .bg-green-dark {
+        background-color: #064e3b;
+      }
+      .icon-size {
+        width: 20px;
+        height: 20px;
+      }
+      /* Solid background color that does not interfere with readability */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fafafa;
+        z-index: -1;
+      }
+      /* Animation for blinking effect on highlight elements */
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      /* Styling for highlight elements (e.g. n8n) */
+      .highlight {
+        font-weight: bold;
+        transition: transform 0.3s ease;
+      }
+      /* When hovering over a specialties card, the highlight elements enlarge and blink */
+      .card-specialties:hover .highlight {
+        transform: scale(1.2);
+        animation: blink 1s infinite;
+      }
+      /* Specialties cards: rounded with a border that becomes stronger on hover */
+      .card-specialties {
+        transition: border 0.3s ease;
+        border: 1px solid transparent;
+        border-radius: 1rem;
+      }
+      .card-specialties:hover {
+        border-color: #064e3b;
+      }
+      /* Work history items: plain layout, aligned to left */
+      .experience-item {
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-black">
+    <!-- HERO SECTION -->
+    <section class="bg-white py-16 shadow-sm">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col items-center text-center"
+      >
+        <h1 class="text-3xl font-bold color-green-dark mb-2 rounded-xl">
+          Kelly Cristina dos Santos
+        </h1>
+        <p class="text-lg font-semibold mb-4 rounded-xl">
+          Front End Developer &amp;
+          <strong
+            >Automation, <span class="highlight">n8n</span>, AI
+            Specialist</strong
+          >
+          🚀
+        </p>
+        <!-- Contact Buttons -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 mb-4">
+          <!-- WhatsApp Button -->
+          <a
+            href="https://api.whatsapp.com/send/?phone=%2B5547989184834&text&type=phone_number&app_absent=0"
+            target="_blank"
+            class="flex items-center border border-green-800 px-4 py-2 rounded-xl hover:bg-green-100"
+          >
+            <svg
+              class="icon-size mr-2 fill-current color-green-dark"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="#fff"
+                d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24	c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"
+              ></path>
+              <path
+                fill="#fff"
+                d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"
+              ></path>
+              <path
+                fill="#cfd8dc"
+                d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3	l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"
+              ></path>
+              <path
+                fill="#40c351"
+                d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8l6-1.6l0.6,0.3	c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"
+              ></path>
+              <path
+                fill="#fff"
+                fill-rule="evenodd"
+                d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4	s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6	s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4	c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8	C20.6,19.3,19.7,17,19.3,16z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+          <!-- Social Links -->
+          <div class="flex space-x-6 mt-4">
+            <!-- LinkedIn -->
+            <a
+              href="#"
+              class="flex items-center text-sm font-medium color-green-dark hover:text-black"
+            >
+              <svg
+                class="icon-size mr-1 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M100.28 448H7.4V149.9h92.88zM53.79 108.1C24.09 108.1 0 83.24 0 53.88A53.79 53.79 0 0 1 53.79 0C83.24 0 108 24.09 108 53.88c0 29.36-24.85 54.22-54.21 54.22zM447.8 448h-92.68V302.4c0-34.7-.7-79.3-48.33-79.3-48.39 0-55.8 37.8-55.8 76.8V448h-92.67V149.9h88.97v40.7h1.28c12.4-23.5 42.62-48.3 87.73-48.3 93.9 0 111.2 61.8 111.2 142.3V448z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+            <!-- GitHub -->
+            <a
+              href="#"
+              class="flex items-center text-sm font-medium color-green-dark hover:text-black"
+            >
+              <svg
+                class="icon-size mr-1 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.8-4.8 3.4-2.5-.4-4.2-2.3-4.2-4.3 0-2 2.3-3.8 4.8-3.4 2.5.4 4.2 2.2 4.2 4.3zm-31.5-8c-1.1 1.6-.9 4 .6 5.5 1.5 1.4 3.7 1.6 5.2.4 1.1-1.6.9-4-.6-5.5-1.5-1.4-3.7-1.6-5.2-.4zm44.2-1.7c-2.6.7-4.1 2.6-3.6 4.7.5 2.1 3 3.3 5.6 2.6 2.6-.7 4.1-2.6 3.6-4.7-.5-2.1-3-3.3-5.6-2.6zM244 8C108.5 8 0 116.6 0 252.3c0 107.9 69.8 199.4 166.4 231.7 12.2 2.3 16.6-5.3 16.6-11.7 0-5.7-.2-24.5-.3-44.5-60.7 13.1-73.7-26.2-73.7-26.2-11.1-28.3-27.1-35.8-27.1-35.8-22.1-15.1 1.7-14.8 1.7-14.8 24.4 1.7 37.3 25.1 37.3 25.1 21.7 37.2 56.8 26.5 70.7 20.2 2.2-15.7 8.5-26.5 15.4-32.6-48.4-5.5-99.3-24.2-99.3-107.7 0-23.8 8.5-43.2 22.4-58.4-2.2-5.5-9.7-27.7 2.1-57.7 0 0 18.2-5.8 59.6 24.3 17.3-4.8 35.8-7.2 54.2-7.3 18.4.1 36.9 2.5 54.2 7.3 41.3-28.1 59.5-22.3 59.5-22.3 11.8 30 4.3 52.2 2.1 57.7 13.9 15.2 22.4 34.6 22.4 58.4 0 83.7-51 102.1-99.6 107.4 8.7 7.5 16.5 22.4 16.5 45.2 0 32.7-.3 59-.3 67.1 0 6.4 4.3 14.1 16.8 11.7C426.2 451.6 496 360.2 496 252.3 496 116.6 387.5 8 244 8z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <!-- Portfolio -->
+            <a
+              href="#"
+              class="flex items-center text-sm font-medium color-green-dark hover:text-black"
+            >
+              <svg
+                class="icon-size mr-1 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+              >
+                <path
+                  d="M0 384v-320c0-35.3 28.7-64 64-64h512c35.3 0 64 28.7 64 64v320h32c17.7 0 32 14.3 32 32c0 17.7-14.3 32-32 32H0c-17.7 0-32-14.3-32-32c0-17.7 14.3-32 32-32H0zm64-320v320h512v-320H64z"
+                />
+              </svg>
+              Portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KNOW ME MORE -->
+    <section class="py-12">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold color-green-dark mb-4">Know Me More</h2>
+        <p class="text-lg leading-relaxed max-w-3xl mx-auto">
+          <strong
+            >Automation, <span class="highlight">n8n</span>, and AI</strong
+          >
+          are at the heart of my work! I am a Front End Developer with
+          experience in modern web technologies and automation. I build
+          cross-platform applications using <strong>FlutterFlow</strong> and
+          <strong>Flutter</strong>, and develop with
+          <strong
+            >JavaScript, HTML, CSS, TypeScript, React.js, and Next.js</strong
+          >. I also integrate APIs using
+          <strong>Node.js, Nest, Django, and Express</strong>. Currently, I'm
+          developing a microsaas leveraging
+          <span class="highlight">n8n</span> for workflow automation, along with
+          <strong>Supabase</strong> and the <strong>WhatsApp API</strong> to
+          deliver innovative digital solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN COMPETENCIES -->
+    <section class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold color-green-dark mb-8 py-4">
+          Main Competencies
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Automation & Integration -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold mb-2">
+              Automation &amp; Integration
+            </h3>
+            <ul class="list-disc list-inside text-base space-y-1 text-left">
+              <li>
+                Creation of automated workflows using
+                <span class="highlight">n8n</span>.
+              </li>
+              <li>
+                Integration of APIs and systems, optimizing operational
+                processes.
+              </li>
+            </ul>
+          </div>
+          <!-- Artificial Intelligence -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold mb-2">
+              Artificial Intelligence (AI)
+            </h3>
+            <ul class="list-disc list-inside text-base space-y-1 text-left">
+              <li>Development and integration of machine learning models.</li>
+              <li>
+                Application of AI solutions for automation and data analysis.
+              </li>
+            </ul>
+          </div>
+          <!-- Full Stack Development -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold mb-2">Full Stack Development</h3>
+            <ul class="list-disc list-inside text-base space-y-1 text-left">
+              <li>
+                <strong>Front End:</strong> JavaScript, HTML5, CSS, TypeScript,
+                ReactJS, Next.js, Vue.js.
+              </li>
+              <li>
+                <strong>Back End:</strong> Node.js, Express, Python, Django,
+                PHP, Laravel (basic).
+              </li>
+            </ul>
+          </div>
+          <!-- Databases -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold mb-2">Databases</h3>
+            <ul class="list-disc list-inside text-base space-y-1 text-left">
+              <li>PostgreSQL, MySQL, SQLite, MongoDB.</li>
+            </ul>
+          </div>
+          <!-- Tools & Methodologies -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold mb-2">
+              Tools &amp; Methodologies
+            </h3>
+            <ul class="list-disc list-inside text-base space-y-1 text-left">
+              <li>
+                Git, GitHub, Figma, Adobe XD, Agile methodologies (SCRUM).
+              </li>
+            </ul>
+          </div>
+          <!-- Complementary Technologies -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold mb-2">
+              Complementary Technologies
+            </h3>
+            <ul class="list-disc list-inside text-base space-y-1 text-left">
+              <li>Redis, Bootstrap, WordPress, Zod, Crypt, JSON Web Token.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC BACKGROUND -->
+    <section class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold color-green-dark mb-8 py-4">
+          Academic Background
+        </h2>
+        <div class="space-y-6">
+          <!-- Course 1 -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold">FullStack Web Development</h3>
+            <p class="text-base">Kenzie Academy Brasil – Dec/2022</p>
+          </div>
+          <!-- Course 2 -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold">
+              Full-Stack Web Development (PHP, MySQL)
+            </h3>
+            <p class="text-base">
+              State University of Santa Catarina – Jul/2022 to Feb/2023
+            </p>
+          </div>
+          <!-- Course 3 -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold">MBA in Business Intelligence</h3>
+            <p class="text-base">Positivo – Jan/2018 to Jan/2019</p>
+          </div>
+          <!-- Course 4 -->
+          <div
+            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
+          >
+            <h3 class="text-xl font-semibold">Bachelor's in Law</h3>
+            <p class="text-base">
+              Metropolitan College of Maringá – Jul/2011 to Jul/2016
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL WORK HISTORY (Plain, aligned to left) -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold color-green-dark mb-8">
+          Professional Work History
+        </h2>
+        <div class="space-y-8">
+          <!-- Altoo Tech -->
+          <div class="experience-item">
+            <h4 class="text-xl font-semibold">Altoo Tech – App Developer</h4>
+            <p class="italic text-sm text-gray-600 mb-2">
+              January 2024 – Present
+            </p>
+            <ul class="list-disc list-inside ml-4 text-base space-y-1">
+              <li>Develop cross-platform apps (FlutterFlow, Flutter).</li>
+              <li>
+                Build a microsaas integrating
+                <span class="highlight">n8n</span>, Supabase, and WhatsApp API.
+              </li>
+              <li>Maintain robust API/database solutions.</li>
+            </ul>
+          </div>
+          <!-- SG Global Group -->
+          <div class="experience-item">
+            <h4 class="text-xl font-semibold">
+              SG Global Group (Remote) – Front End Developer
+            </h4>
+            <p class="italic text-sm text-gray-600 mb-2">
+              October 2023 – Present
+            </p>
+            <ul class="list-disc list-inside ml-4 text-base space-y-1">
+              <li>
+                Develop responsive interfaces (Dart, JavaScript, HTML, CSS,
+                Tailwind).
+              </li>
+              <li>
+                Collaborate with multidisciplinary teams to enhance product
+                performance.
+              </li>
+            </ul>
+          </div>
+          <!-- Kenzie Academy Brasil -->
+          <div class="experience-item">
+            <h4 class="text-xl font-semibold">
+              Kenzie Academy Brasil (Remote) – Web Development Monitor
+            </h4>
+            <p class="italic text-sm text-gray-600 mb-2">
+              November 2022 – Present
+            </p>
+            <ul class="list-disc list-inside ml-4 text-base space-y-1">
+              <li>
+                Review code for JavaScript, HTML, CSS, TypeScript, React.js,
+                Node.js, Express, TypeORM, and Prisma.
+              </li>
+              <li>
+                Assist students with both front-end and back-end challenges.
+              </li>
+            </ul>
+          </div>
+          <!-- Melbz Sing Kids -->
+          <div class="experience-item">
+            <h4 class="text-xl font-semibold">
+              Melbz Sing Kids – Business Partner
+            </h4>
+            <p class="italic text-sm text-gray-600 mb-2">
+              July 2020 – July 2022
+            </p>
+            <ul class="list-disc list-inside ml-4 text-base space-y-1">
+              <li>Developed a sales website (WordPress, CSS).</li>
+              <li>
+                Managed digital ad campaigns (Facebook Ads, Google Ads)
+                generating over 40k leads.
+              </li>
+            </ul>
+          </div>
+          <!-- Cooper Card -->
+          <div class="experience-item">
+            <h4 class="text-xl font-semibold">
+              Cooper Card Administradora de Cartões – Tenders Analyst
+            </h4>
+            <p class="italic text-sm text-gray-600 mb-2">
+              July 2014 – May 2017
+            </p>
+            <ul class="list-disc list-inside ml-4 text-base space-y-1">
+              <li>Managed bidding processes and analyzed tender documents.</li>
+              <li>
+                Represented the company in both digital and in-person bidding.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
