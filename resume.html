@@ -29,7 +29,9 @@
         width: 20px;
         height: 20px;
       }
-      /* Solid background color that does not interfere with readability */
+      /* Background pattern with an automation (gear) symbol */
+      /* Leaves the gear image but adds a solid overlay */
+      /* Removes the background image and uses a solid background */
       body::before {
         content: "";
         position: fixed;
@@ -37,10 +39,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #fafafa;
+        background-color: #fafafa; /* Very soft background */
         z-index: -1;
       }
-      /* Animation for blinking effect on highlight elements */
+
+      /* Animation for blinking effect */
       @keyframes blink {
         0% {
           opacity: 1;
@@ -52,29 +55,23 @@
           opacity: 1;
         }
       }
-      /* Styling for highlight elements (e.g. n8n) */
+      /* Default styling for highlight elements */
       .highlight {
         font-weight: bold;
         transition: transform 0.3s ease;
       }
-      /* When hovering over a specialties card, the highlight elements enlarge and blink */
-      .card-specialties:hover .highlight {
+      /* When hovering over a card, highlight elements enlarge and blink */
+      .card:hover .highlight {
         transform: scale(1.2);
         animation: blink 1s infinite;
       }
-      /* Specialties cards: rounded with a border that becomes stronger on hover */
-      .card-specialties {
-        transition: border 0.3s ease;
-        border: 1px solid transparent;
-        border-radius: 1rem;
+      /* Card hover effect for a livelier appearance */
+      .card {
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
       }
-      .card-specialties:hover {
-        border-color: #064e3b;
-      }
-      /* Work history items: plain layout, aligned to left */
-      .experience-item {
-        margin-bottom: 2rem;
-        text-align: left;
+      .card:hover {
+        box-shadow: 0 12px 24px rgba(177, 177, 177, 0.2);
+        transform: translateY(-4px);
       }
     </style>
   </head>
@@ -101,8 +98,9 @@
           <a
             href="https://api.whatsapp.com/send/?phone=%2B5547989184834&text&type=phone_number&app_absent=0"
             target="_blank"
-            class="flex items-center border border-green-800 px-4 py-2 rounded-xl hover:bg-green-100"
+            class="flex items-center border border-green-800 px-4 py-2 rounded hover:bg-green-100"
           >
+            <!-- Inline SVG for WhatsApp (using provided SVG) -->
             <svg
               class="icon-size mr-2 fill-current color-green-dark"
               xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +129,26 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
+            <span class="color-green-dark font-medium">+55 47 98918-4834</span>
           </a>
+          <!-- Email Button -->
+          <a
+            href="mailto:kelly_92b@hotmail.com"
+            class="flex items-center border border-green-800 px-4 py-2 rounded hover:bg-green-100"
+          >
+            <!-- Envelope SVG (omitted for brevity) -->
+            <svg
+              class="icon-size mr-2 fill-current color-green-dark"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M467 76H45C20.2 76 0 96.2 0 121v270c0 24.8 20.2 45 45 45h422c24.8 0 45-20.2 45-45V121c0-24.8-20.2-45-45-45zM467 121v7.7c-20.3 15.8-81.3 62.3-150.6 114.6-17.8 13.4-53.3 46.2-77.1 45.9-23.7.3-59.2-32.5-77.1-45.9C99.2 191 38.2 144.5 17.9 128.7V121h449zM45 391c-8.3 0-15-6.7-15-15V163.1c22 16.8 54.5 41.2 102.1 76.1 21.6 16.3 59.3 50.2 93.9 49.8 34.6.4 72.3-33.5 93.9-49.8 47.6-34.9 80.1-59.3 102.1-76.1V376c0 8.3-6.7 15-15 15H45z"
+              />
+            </svg>
+            <span class="color-green-dark font-medium">kelly_92b@hotmail.com</span>
+          </a>
+        </div>
           <!-- Social Links -->
           <div class="flex space-x-6 mt-4">
             <!-- LinkedIn -->
@@ -195,9 +212,9 @@
           <strong
             >Automation, <span class="highlight">n8n</span>, and AI</strong
           >
-          are at the heart of my work! I am a Front End Developer with
-          experience in modern web technologies and automation. I build
-          cross-platform applications using <strong>FlutterFlow</strong> and
+          are at the heart of my work! I’m a Front End Developer with experience
+          in modern web technologies and automation. I build cross-platform
+          applications using <strong>FlutterFlow</strong> and
           <strong>Flutter</strong>, and develop with
           <strong
             >JavaScript, HTML, CSS, TypeScript, React.js, and Next.js</strong
@@ -210,7 +227,6 @@
         </p>
       </div>
     </section>
-
     <!-- MAIN COMPETENCIES -->
     <section class="py-12 bg-white">
       <div class="max-w-6xl mx-auto px-4 text-center">
@@ -218,14 +234,14 @@
           Main Competencies
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Automation & Integration -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
+          <!-- Automation and Integration -->
+          <div class="bg-gray-50 p-6 rounded-xl border">
             <h3 class="text-xl font-semibold mb-2">
-              Automation &amp; Integration
+              Automation and Integration
             </h3>
-            <ul class="list-disc list-inside text-base space-y-1 text-left">
+            <ul
+              class="list-disc list-inside text-base space-y-1 text-left"
+            >
               <li>
                 Creation of automated workflows using
                 <span class="highlight">n8n</span>.
@@ -237,90 +253,96 @@
             </ul>
           </div>
           <!-- Artificial Intelligence -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
+          <div class="bg-gray-50 p-6 rounded-xl border">
             <h3 class="text-xl font-semibold mb-2">
               Artificial Intelligence (AI)
             </h3>
-            <ul class="list-disc list-inside text-base space-y-1 text-left">
-              <li>Development and integration of machine learning models.</li>
+            <ul
+              class="list-disc list-inside text-base space-y-1 text-left"
+            >
+              <li>
+                Development and integration of machine learning models.
+              </li>
               <li>
                 Application of AI solutions for automation and data analysis.
               </li>
             </ul>
           </div>
           <!-- Full Stack Development -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
-            <h3 class="text-xl font-semibold mb-2">Full Stack Development</h3>
-            <ul class="list-disc list-inside text-base space-y-1 text-left">
+          <div class="bg-gray-50 p-6 rounded-xl border">
+            <h3 class="text-xl font-semibold mb-2">
+              Full Stack Development
+            </h3>
+            <ul
+              class="list-disc list-inside text-base space-y-1 text-left"
+            >
               <li>
                 <strong>Front End:</strong> JavaScript, HTML5, CSS, TypeScript,
                 ReactJS, Next.js, Vue.js.
               </li>
               <li>
-                <strong>Back End:</strong> Node.js, Express, Python, Django,
-                PHP, Laravel (basic).
+                <strong>Back End:</strong> Node.js, Express, Python, Django, PHP,
+                Laravel (basic).
               </li>
             </ul>
           </div>
           <!-- Databases -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
+          <div class="bg-gray-50 p-6 rounded-xl border">
             <h3 class="text-xl font-semibold mb-2">Databases</h3>
-            <ul class="list-disc list-inside text-base space-y-1 text-left">
+            <ul
+              class="list-disc list-inside text-base space-y-1 text-left"
+            >
               <li>PostgreSQL, MySQL, SQLite, MongoDB.</li>
             </ul>
           </div>
           <!-- Tools & Methodologies -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
+          <div class="bg-gray-50 p-6 rounded-xl border">
             <h3 class="text-xl font-semibold mb-2">
               Tools &amp; Methodologies
             </h3>
-            <ul class="list-disc list-inside text-base space-y-1 text-left">
+            <ul
+              class="list-disc list-inside text-base space-y-1 text-left"
+            >
               <li>
-                Git, GitHub, Figma, Adobe XD, Agile methodologies (SCRUM).
+                Git, GitHub, Figma, Adobe XD, Agile Methodologies (SCRUM).
               </li>
             </ul>
           </div>
           <!-- Complementary Technologies -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
+          <div class="bg-gray-50 p-6 rounded-xl border">
             <h3 class="text-xl font-semibold mb-2">
               Complementary Technologies
             </h3>
-            <ul class="list-disc list-inside text-base space-y-1 text-left">
-              <li>Redis, Bootstrap, WordPress, Zod, Crypt, JSON Web Token.</li>
+            <ul
+              class="list-disc list-inside text-base space-y-1 text-left"
+            >
+              <li>
+                Redis, Bootstrap, Wordpress, Zod, Crypt, JSON Web Token.
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ACADEMIC BACKGROUND -->
+    <!-- EDUCATION -->
     <section class="py-12 bg-white">
       <div class="max-w-6xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold color-green-dark mb-8 py-4">
-          Academic Background
+          Education
         </h2>
         <div class="space-y-6">
           <!-- Course 1 -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
-            <h3 class="text-xl font-semibold">FullStack Web Development</h3>
-            <p class="text-base">Kenzie Academy Brasil – Dec/2022</p>
+          <div class="text-left p-2">
+            <h3 class="text-xl font-semibold">
+              FullStack Web Development
+            </h3>
+            <p class="text-base">
+              Kenzie Academy Brazil – Dec/2022
+            </p>
           </div>
           <!-- Course 2 -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
+          <div class="text-left p-2">
             <h3 class="text-xl font-semibold">
               Full-Stack Web Development (PHP, MySQL)
             </h3>
@@ -329,17 +351,19 @@
             </p>
           </div>
           <!-- Course 3 -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
-            <h3 class="text-xl font-semibold">MBA in Business Intelligence</h3>
-            <p class="text-base">Positivo – Jan/2018 to Jan/2019</p>
+          <div class="text-left p-2">
+            <h3 class="text-xl font-semibold">
+              MBA in Business Intelligence
+            </h3>
+            <p class="text-base">
+              Positivo – Jan/2018 to Jan/2019
+            </p>
           </div>
           <!-- Course 4 -->
-          <div
-            class="card-specialties bg-gray-50 p-6 rounded-xl border hover:border-green-800 transition text-left"
-          >
-            <h3 class="text-xl font-semibold">Bachelor's in Law</h3>
+          <div class="text-left p-2">
+            <h3 class="text-xl font-semibold">
+              Bachelor’s in Law
+            </h3>
             <p class="text-base">
               Metropolitan College of Maringá – Jul/2011 to Jul/2016
             </p>
@@ -348,30 +372,37 @@
       </div>
     </section>
 
-    <!-- PROFESSIONAL WORK HISTORY (Plain, aligned to left) -->
-    <section class="py-12">
+    <!-- EXPERIENCE SECTION WITH FULL-WIDTH CARDS IN COLUMN -->
+    <section class="py-12 bg-white">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold color-green-dark mb-8">
-          Professional Work History
-        </h2>
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold color-green-dark mb-2">Experience</h2>
+          <p class="text-lg text-gray-600">Professional Work History</p>
+        </div>
         <div class="space-y-8">
-          <!-- Altoo Tech -->
-          <div class="experience-item">
-            <h4 class="text-xl font-semibold">Altoo Tech – App Developer</h4>
+          <!-- Card for Altoo Tech -->
+          <div class="card bg-gray-50 p-6 rounded-xl shadow w-full">
+            <h4 class="text-xl font-semibold">
+              Altoo Tech – App Developer
+            </h4>
             <p class="italic text-sm text-gray-600 mb-2">
               January 2024 – Present
             </p>
             <ul class="list-disc list-inside ml-4 text-base space-y-1">
-              <li>Develop cross-platform apps (FlutterFlow, Flutter).</li>
               <li>
-                Build a microsaas integrating
-                <span class="highlight">n8n</span>, Supabase, and WhatsApp API.
+                Develop cross-platform apps (FlutterFlow, Flutter).
               </li>
-              <li>Maintain robust API/database solutions.</li>
+              <li>
+                Build microsaas integrating <span class="highlight">n8n</span>,
+                Supabase, WhatsApp API.
+              </li>
+              <li>
+                Maintain robust API/database solutions.
+              </li>
             </ul>
           </div>
-          <!-- SG Global Group -->
-          <div class="experience-item">
+          <!-- Card for SG Global Group -->
+          <div class="card bg-gray-50 p-6 rounded-xl shadow w-full">
             <h4 class="text-xl font-semibold">
               SG Global Group (Remote) – Front End Developer
             </h4>
@@ -380,8 +411,7 @@
             </p>
             <ul class="list-disc list-inside ml-4 text-base space-y-1">
               <li>
-                Develop responsive interfaces (Dart, JavaScript, HTML, CSS,
-                Tailwind).
+                Develop responsive interfaces (Dart, JS, HTML, CSS, Tailwind).
               </li>
               <li>
                 Collaborate with multidisciplinary teams to enhance product
@@ -389,8 +419,8 @@
               </li>
             </ul>
           </div>
-          <!-- Kenzie Academy Brasil -->
-          <div class="experience-item">
+          <!-- Card for Kenzie Academy Brasil -->
+          <div class="card bg-gray-50 p-6 rounded-xl shadow w-full">
             <h4 class="text-xl font-semibold">
               Kenzie Academy Brasil (Remote) – Web Development Monitor
             </h4>
@@ -399,16 +429,16 @@
             </p>
             <ul class="list-disc list-inside ml-4 text-base space-y-1">
               <li>
-                Review code for JavaScript, HTML, CSS, TypeScript, React.js,
-                Node.js, Express, TypeORM, and Prisma.
+                Review code for JS, HTML, CSS, TypeScript, React.js, Node.js,
+                Express, TypeORM, Prisma.
               </li>
               <li>
-                Assist students with both front-end and back-end challenges.
+                Assist students with front-end/back-end challenges.
               </li>
             </ul>
           </div>
-          <!-- Melbz Sing Kids -->
-          <div class="experience-item">
+          <!-- Card for Melbz Sing Kids -->
+          <div class="card bg-gray-50 p-6 rounded-xl shadow w-full">
             <h4 class="text-xl font-semibold">
               Melbz Sing Kids – Business Partner
             </h4>
@@ -416,15 +446,17 @@
               July 2020 – July 2022
             </p>
             <ul class="list-disc list-inside ml-4 text-base space-y-1">
-              <li>Developed a sales website (WordPress, CSS).</li>
+              <li>
+                Developed sales website (WordPress, CSS).
+              </li>
               <li>
                 Managed digital ad campaigns (Facebook Ads, Google Ads)
-                generating over 40k leads.
+                generating 40k+ leads.
               </li>
             </ul>
           </div>
-          <!-- Cooper Card -->
-          <div class="experience-item">
+          <!-- Card for Cooper Card -->
+          <div class="card bg-gray-50 p-6 rounded-xl shadow w-full">
             <h4 class="text-xl font-semibold">
               Cooper Card Administradora de Cartões – Tenders Analyst
             </h4>
@@ -432,9 +464,11 @@
               July 2014 – May 2017
             </p>
             <ul class="list-disc list-inside ml-4 text-base space-y-1">
-              <li>Managed bidding processes and analyzed tender documents.</li>
               <li>
-                Represented the company in both digital and in-person bidding.
+                Managed bidding processes, analyzed tender documents.
+              </li>
+              <li>
+                Represented the company in digital &amp; in-person bidding.
               </li>
             </ul>
           </div>
